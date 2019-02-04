@@ -1,0 +1,18 @@
+<snippet>
+    <content><![CDATA[
+% In the brackets put a [S] if its a symbol, or an [A] if its an abbreviation.[T] if its an subscript
+% The items get ordered alphabetically on their own.
+\begin{multicols}{2}
+
+\nomenclature[A]{CPL}{Cells per length}
+\nomenclature[S]{\$t\$}{Time of rupture}
+\nomenclature[T]{\$r\$}{Rupture}
+
+\end{multicols}
+
+\printnomenclature
+]]></content>
+    <tabTrigger>Nomenclature</tabTrigger>
+    <scope>text.plain, text.tex.latex</scope>
+    <description>New Nomenclature Page</description>
+</snippet>

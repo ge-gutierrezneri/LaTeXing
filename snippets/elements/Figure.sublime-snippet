@@ -1,12 +1,13 @@
 <snippet>
 	<content><![CDATA[
-\begin{figure}[${5:htbp}]
+\begin{figure}[H] % other options: h, t, p
 	\centering
-	\includegraphics[width=${2:0.95}\textwidth]{${1}}
+	\includegraphics[${2:w}${2/(w)$|(h)$|(s)$|(.*)/(?1:idth=0.6\\linewidth)(?2:eight=0.3\\linewidth)(?3:cale=1.0)/}]{img/${1}}
 	\caption{${3:caption}}
 	\label{fig:${4:label}}
-\end{figure}
+\end{figure}$0
 ]]></content>
+	<!-- \includegraphics[width=${2:0.9}\linewidth]{img/${1}} -->
   <tabTrigger>fig</tabTrigger>
   <scope>text.tex.latex</scope>
   <description>New figure</description>

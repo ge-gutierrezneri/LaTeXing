@@ -1,0 +1,51 @@
+<snippet>
+  <content><![CDATA[
+\documentclass[11pt]{book}
+\usepackage{${1:font}} 	% palatino, charter, fourier, utopia, times, lmodern
+\input{preamble.tex}
+
+%% DOCUMENT SETTINGS
+\usepackage[a4paper, margin=1in]{geometry}
+\author{GEGN}
+\title{${2:tile for document}}
+
+%% CONTENT ////////////////////////////////////////////////////////////////////
+\begin{document}
+%% PREFACE --------------------------------------------------------------------
+\pagenumbering{gobble}
+\input{title_page.tex}
+
+\pagenumbering{roman}
+\tableofcontents
+\vfill
+\pagebreak
+
+%% CHAPTERS -------------------------------------------------------------------
+\pagenumbering{arabic}
+% \begin{multicols}{2}
+
+\input{${0}}
+
+% \end{multicols}
+
+%% ENDING ---------------------------------------------------------------------
+% \pagebreak
+% \input{nomenclature.tex}
+
+% \pagebreak
+% \listoftodos[Notes / To-dos]
+% \vfill
+
+% \pagebreak
+% \printindex
+
+\pagebreak
+\bibliography{biblio.bib}
+
+\end{document}
+%% ////////////////////////////////////////////////////////////////////////////
+]]></content>
+  <tabTrigger>documentclass{book}</tabTrigger>
+  <scope>text.plain, text.tex.latex</scope>
+  <description>New Book</description>
+</snippet>

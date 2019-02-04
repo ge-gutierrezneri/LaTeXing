@@ -1,5 +1,5 @@
 {
-	"scope": "meta.environment.math",
+	"scope": "meta.function.environment.math.latex",
 	"completions":
 	[
 		{ "trigger": "a", "contents": "\\alpha" },
@@ -35,12 +35,12 @@
 
 		{ "trigger": "q", "contents": "\\quad " },
 		{ "trigger": "qq", "contents": "\\qquad " },
-		{ "trigger": "lim", "contents": "\\limits_\\{$1\\}^\\{$2\\}$0" },
-		{ "trigger": "sum", "contents": "\\sum${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}{$0}" },
-		{ "trigger": "int", "contents": "\\int${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}{$0}" },
-		{ "trigger": "oint", "contents": "\\oint${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}{$0}" },
-		{ "trigger": "iint", "contents": "\\iint${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}{$0}" },
-		{ "trigger": "iiint", "contents": "\\iiint${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}{$0}" },
+		{ "trigger": "lim", "contents": "\\limits_\\{$1\\}^\\{$2\\}" },
+		{ "trigger": "sum", "contents": "\\sum${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}" },
+		{ "trigger": "int", "contents": "\\int${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}" },
+		{ "trigger": "oint", "contents": "\\oint${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}" },
+		{ "trigger": "iint", "contents": "\\iint${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}" },
+		{ "trigger": "iiint", "contents": "\\iiint${1:\\limits_\\{$2\\}${3:^\\{$4\\}}}" },
 
 		{ "trigger": "D", "contents": "\\Delta" },
 		{ "trigger": "N", "contents": "\\nabla" },
