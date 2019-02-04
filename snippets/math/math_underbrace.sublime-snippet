@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\\underbrace{$TM_SELECTED_TEXT}_{${1:\text{$2\}}}
+]]></content>
+	<scope>text.tex.latex</scope>
+	<description>Underbrace</description>
+</snippet>

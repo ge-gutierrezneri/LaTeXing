@@ -29,6 +29,23 @@
                 "-outdir={outdir}",
                 "{file}"
             ],
+            "latexmk_cont": [
+                "latexmk",
+                "-f",
+                "-quiet",
+                "-pdf",
+                "-pvc",
+                "-synctex={synctex}",
+                "-jobname={pdfname}",
+                "-outdir={outdir}",
+                "{file}"
+            ],
+            "makeindex": [
+                "makeindex",
+                "-s",
+                "{file}",
+                ".nlo"
+            ],
             "lualatex": [
                 "lualatex",
                 "-interaction=nonstopmode",
@@ -44,8 +61,7 @@
                 "-interaction=batchmode",
                 "-jobname={pdfname}",
                 "-synctex={synctex}",
-                "-output-directory={outdir}",
-                "{file}"
+                "-output-directory={outdir}"
             ],
             "xelatex": [
                 "xelatex",
@@ -184,6 +200,17 @@
                 "-jobname={pdfname}",
                 "-synctex={synctex}",
                 "-output-directory={outdir}",
+                "{file}"
+            ],
+            "continuous_latexmk": [
+                "latexmk",
+                "-f",
+                "-quiet",
+                "-pdf",
+                "-pvc",
+                "-synctex={synctex}",
+                "-jobname={pdfname}",
+                "-outdir={outdir}",
                 "{file}"
             ]
         },

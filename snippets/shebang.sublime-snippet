@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[#!/bin/sh ${1:${TM_SCOPE/(?:source|.*)\.(?:(shell)|(\w+)).*/(?1:bash:$2)/}}
+]]></content>
+	<tabTrigger>!</tabTrigger>
+	<scope>source.shell</scope>
+	<description>#!/bin/sh</description>
+</snippet>

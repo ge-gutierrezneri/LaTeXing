@@ -132,21 +132,90 @@
         ]
     },
     {
-        "keys": ["ctrl+l", "ctrl+w", "b"],
+        "keys": ["ctrl+i"],
+        "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/wrapper/textit.sublime-snippet"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"}
+        ]
+    },
+    {
+    	"keys": ["ctrl+b"],
         "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/wrapper/textbf.sublime-snippet"},
         "context": [
             {"key": "selector", "operand": "text.tex.latex", "operator": "equal"}
         ]
     },
     {
-        "keys": ["ctrl+l", "ctrl+w", "e"],
+        "keys": ["ctrl+b"],
+        "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/mathbf.sublime-snippet"},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["ctrl+h"],
+        "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/math_hat.sublime-snippet"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"},
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["ctrl+m", "ctrl+u"],
+        "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/math_underbrace.sublime-snippet"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"},
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["ctrl+m", "ctrl+m"],
+        "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/mathcal.sublime-snippet"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"},
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["ctrl+shift+t"],
+        "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/math_text.sublime-snippet"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"},
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["ctrl+o"],
+        "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/math_operatorname.sublime-snippet"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"},
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["ctrl+shift+v"],
+        "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/math_overarrow.sublime-snippet"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"},
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["ctrl+t"],
+        "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/wrapper/texttt.sublime-snippet"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"}
+        ]
+    },
+    {
+    	"keys": ["ctrl+e"],
         "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/wrapper/emph.sublime-snippet"},
         "context": [
             {"key": "selector", "operand": "text.tex.latex", "operator": "equal"}
         ]
     },
     {
-        "keys": ["ctrl+l", "ctrl+w", "u"],
+        "keys": ["ctrl+shift+-"],
         "command": "insert_snippet", "args": {"name": "Packages/LaTeXing/snippets/wrapper/underline.sublime-snippet"},
         "context": [
             {"key": "selector", "operand": "text.tex.latex", "operator": "equal"}
@@ -183,11 +252,131 @@
         ]
     },
     {
-        "keys": ["ctrl+super+b"],
+        "keys": ["ctrl+alt+b"],
         "command": "ltx_quick_build_compiler"
     },
     {
         "keys": ["shift+ctrl+b"],
         "command": "ltx_quick_build_compiler", "args": {"primary_qb": true}
+    },
+    // ----------------------------------------------------------------------------------------------------------------------------------------------
+    {
+        "keys": ["enter"],
+        "command": "insert_snippet", "args": {"contents": "\n\\item ${0:$SELECTION}"},
+        "context": [
+            {"key": "selection_empty", "match_all": true, "operand": true, "operator": "equal"},
+            {"key": "selector", "operand": "text.tex.latex.ing", "operator": "equal"},
+            {"key": "selector", "operand": "meta.environment.list.itemize.latex", "operator": "equal"},
+        ]
+    },
+    {
+        "keys": ["enter"],
+        "command": "insert_snippet", "args": {"contents": "\n\\item ${0:$SELECTION}"},
+        "context": [
+            {"key": "selection_empty", "match_all": true, "operand": true, "operator": "equal"},
+            {"key": "selector", "operand": "text.tex.latex.ing", "operator": "equal"},
+            {"key": "selector", "operand": "meta.environment.list.enumerate.latex", "operator": "equal"},
+        ]
+    },
+    {
+        "keys": [","],
+        "command": "insert_snippet", "args": {"contents": ",\\, "},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": [";"],
+        "command": "insert_snippet", "args": {"contents": ";\\; "},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    // {
+    //     "keys": ["(", ")"],
+    //     "command": "insert_snippet", "args": {"contents": "($SELECTION)$0"},
+    //     "context": [
+    //         {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+    //     ]
+    // },
+    {
+        "keys": ["(", "("],
+        "command": "insert_snippet", "args": {"contents": "\\( ${0:$SELECTION} \\)"},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    // {
+    //     "keys": ["[", "]"],
+    //     "command": "insert_snippet", "args": {"contents": "[$SELECTION]$0"},
+    //     "context": [
+    //         {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+    //     ]
+    // },
+    {
+        "keys": ["[", "["],
+        "command": "insert_snippet", "args": {"contents": "\\[ ${0:$SELECTION} \\]"},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": [".", "."],
+        "command": "insert_snippet", "args": {"contents": "\\cdot"},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["*", "*"],
+        "command": "insert_snippet", "args": {"contents": "\\times"},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["~", "~"],
+        "command": "insert_snippet", "args": {"contents": "\\sim"},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["~", "="],
+        "command": "insert_snippet", "args": {"contents": "\\approx"},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["~", "+"],
+        "command": "insert_snippet", "args": {"contents": "\\approx"},
+        "context": [
+            {"key": "selector", "operand": "(meta.environment.math.inline.dollar.latex, meta.environment.math.block.be.latex, meta.environment.math.block.dollar.latex, meta.function.environment.math.latex, meta.environment.math.latex)", "operator": "equal", "match_all": false}
+        ]
+    },
+    {
+        "keys": ["ctrl+enter"],
+        "command": "insert_snippet", "args": {"contents": "\\vfill \\pagebreak \n"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"}
+        ]
+    },
+    {
+        "keys": ["alt+enter"],
+        "command": "insert_snippet", "args": {"contents": " \\vspace{1em}"},
+        "context": [
+            {"key": "selector", "operand": "text.tex.latex", "operator": "equal"}
+        ]
     }
+    // {
+    //     "keys": ["tab"],
+    //     "command": "insert_snippet", 
+    //     "args": {"contents": "\\begin{itemize}\n\t\\item ${0:$SELECTION}\n\\end{itemize}"},
+    //     "context": [
+    //         {"key": "selection_empty", "match_all": true, "operand": true, "operator": "equal"},
+    //         {"key": "selector", "operand": "text.tex.latex.ing", "operator": "equal"},
+    //         {"key": "selector", "operand": "meta.environment.list.itemize.latex", "operator": "equal"},
+    //     ]
+    // }
 ]

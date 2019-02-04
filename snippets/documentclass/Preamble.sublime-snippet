@@ -1,0 +1,119 @@
+<snippet>
+  <content><![CDATA[
+root${0:<HIT TAB>}
+
+% \usepackage{scrhack}    							  	% Fix 'scrreprt' documentclass
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{setspace}
+\usepackage{subcaption}
+\usepackage{sidecap}
+\usepackage{float}
+\usepackage[none]{hyphenat}
+\usepackage{bm}											% Bold math symbols
+\usepackage{eurosym}									% Euro symbol
+\usepackage{textcomp}									% Degree symbol
+\usepackage[font=footnotesize,labelfont=bf]{caption}	% Change caption's font
+\usepackage{multicol}									% Use Multiple Comlumns
+\usepackage{multirow}									% Use multiple rows
+\usepackage[toc,page]{appendix}							% Make Appendix
+\usepackage{pdfpages}									% Attach PDF pages
+\usepackage{listings}									% Add source code to LaTeX
+\usepackage{tabulary}									% Substitute tabular. Autofits content
+	% use with: \begin{tabulary}{1.0\textwidth}{L|C|R}
+\usepackage[version=4]{mhchem}                    		% Easily write chemical formulas
+\usepackage{arydshln}                                 	% Make dashed lines in tabular, matrix
+	% use with: \hdashline \vdashline
+
+%% MAKING PARAGRAPHS A SUBSUBSUBSECTION
+\usepackage{titlesec}
+\titleformat{\paragraph}
+{\normalfont\small\itshape\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{0.5em}{-0.5em}
+
+%% DEFINE CUSTOM COLORS TO BE USED
+\definecolor{purple}{HTML}{550077}
+\definecolor{grey}{HTML}{bebebe}
+% \definecolor{darkgrey}{rgb}{0.92,0.92,0.92}
+
+%% LINKS INSIDE THE DOCUMENT
+\usepackage[T1]{fontenc}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=purple]{hyperref}
+
+%% REMARKS
+\newtheoremstyle{note_style}% name of the style to be used
+  				{-1em}% measure of space to leave above the theorem. E.g.: 3pt
+  				{0.5em}% measure of space to leave below the theorem. E.g.: 3pt
+  				{\scriptsize}% name of font to use in the body of the theorem
+  				{2em}% measure of space to indent
+  				{\bfseries}% name of head font
+  				{: }% punctuation between head and body
+  				{  }% space after theorem head; " " = normal interword space
+  				{\thmname{#1}\thmnumber{ #2} \thmnote{ #3}}% Manually specify head
+\theoremstyle{note_style}
+\newtheorem*{note}{Note}
+
+%% CUSTOM TODO's
+	\newcommand\todos[1]{
+		\parbox{\linewidth}{
+		\vspace{0.5em}\hspace{1em}
+		\small{\textbf{\scshape{Pending:}}}
+		\todo[backgroundcolor=purple!25,bordercolor=white,inline]{
+			\hspace{1em}\small{#1}
+			}}
+	}
+	\newcommand\deffinition[2]{
+		\parbox{\linewidth}{
+		\vspace{0.5em}\hspace{1em}
+		\small{\textbf{#1}}
+		\todo[backgroundcolor=grey!25,bordercolor=white,inline]{
+			\small{#2}}}
+	}
+
+%% MAKE A NOMENCLATURE
+\immediate\write18{makeindex -s nomencl.ist -o "\jobname.nls" "\jobname.nlo"}
+\usepackage{nomencl}
+\makenomenclature
+\usepackage{etoolbox}
+\renewcommand\nomgroup[1]{%
+ 	\item[\bfseries
+ 	\ifstrequal{#1}{A}{Acronyms}{%
+ 	\ifstrequal{#1}{S}{Symbols}{%
+ 	\ifstrequal{#1}{O}{Subscripts}{}}}%
+]}
+\sloppy
+  
+%% SETTING THE NUMBERING SCHEMES OF SECTIONS AND TABLE OF CONTENTS
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+%% CITATION FROM THE BIBLIOGRAPHY
+\usepackage[square, numbers, sort&compress, nonamebreak]{natbib}
+\bibliographystyle{abbrvnat}
+
+%% ITEMIZE AND ENUMARATE - SEPARATION AND STYLE
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+\setenumerate{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+% Label for item
+\renewcommand\labelitemi{\textcolor{purple}{\$\diamond\$}}
+% Margins for itemize and enumerate
+\setlist[itemize,1]{leftmargin=5em, rightmargin=5em}
+\setlist[enumerate,1]{leftmargin=5em, rightmargin=5em}
+
+%% PARAGRAPH INDENDATION
+\setlength{\parindent}{0em}
+\setlength{\parskip}{0.5em}
+]]></content>
+  <tabTrigger>preamble</tabTrigger>
+  <scope>text.plain, text.tex.latex</scope>
+  <description>A preamble</description>
+</snippet>

@@ -1,0 +1,5 @@
+<snippet>
+	<content><![CDATA[\\hat{${1:$SELECTION}}]]></content>
+	<scope>text.tex.latex</scope>
+	<description>Unit vector hat - Math</description>
+</snippet>

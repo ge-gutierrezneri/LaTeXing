@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+\nomenclature[${1:ASO}]{${2:\$${3:a}\$}}{${4:abbreviation}}$0
+]]></content>
+	<tabTrigger>nom</tabTrigger>
+	<scope>text.tex.latex</scope>
+  <description>New Nomenclature</description>
+</snippet>

@@ -1,5 +1,15 @@
 {
     /*
+     * Username and License Code
+     *
+     * Fill your license from LaTeXing.com, thanks for the support!!!
+     *
+     */
+
+    "username": "",
+    "license": "",
+
+    /*
      * Log
      *
      * Debug informations inside the python console, just for test purposes,
@@ -30,8 +40,12 @@
             "cmds": ["pdflatex"]
         },
         {
-            "name": "Quick Build 1: pdflatex + bibtex + pdflatex (2x)",
-            "cmds": ["pdflatex", "bibtex", "pdflatex", "pdflatex"]
+            "name": "Full build: latexmk",
+            "cmds": ["latexmk"]
+        },
+        {
+            "name": "Continous preview",
+            "cmds": ["latexmk_cont"]
         },
         {
             "name": "Quick Build 2: pdflatex + biber + pdflatex (2x)",
@@ -109,7 +123,8 @@
         "mthelp": ["mthelp"],
         "texcount": ["texcount"],
         "texdoc": ["texdoc"],
-        "rscript": ["Rscript", "Rscript.exe"]
+        "rscript": ["Rscript", "Rscript.exe"],
+        "makeindex": ["makeindex"]
     },
 
     /*
@@ -233,7 +248,7 @@
      *
      */
 
-    "partial_build": false,
+    "partial_build": true,
 
     /*
      * Open PDF on Load
@@ -243,7 +258,7 @@
      *
      */
 
-    "open_pdf_on_load": true,
+    "open_pdf_on_load": false,
 
     /*
      * Typeset on Save
@@ -590,30 +605,30 @@
      */
 
     "online_lookup": [
-        {
-            "title": "Dict.cc",
-            "url": "http://www.dict.cc/?s={query}"
-        },
-        {
-            "title": "Dict.leo.org",
-            "url": "http://dict.leo.org/ende/#/search={query}"
-        },
-        {
-            "title": "Dictionary.com",
-            "url": "http://dictionary.reference.com/browse/{query}"
-        },
-        {
-            "title": "Linguee.com EN-DE",
-            "url": "http://www.linguee.com/english-german/search?query={query}"
-        },
-        {
-            "title": "Linguee.de DE-EN",
-            "url": "http://www.linguee.de/deutsch-englisch/search?query={query}"
-        },
-        {
-            "title": "Pons.eu",
-            "url": "http://en.pons.eu/dict/search/results/?q={query}&l=deen"
-        },
+        // {
+        //     "title": "Dict.cc",
+        //     "url": "http://www.dict.cc/?s={query}"
+        // },
+        // {
+        //     "title": "Dict.leo.org",
+        //     "url": "http://dict.leo.org/ende/#/search={query}"
+        // },
+        // {
+        //     "title": "Dictionary.com",
+        //     "url": "http://dictionary.reference.com/browse/{query}"
+        // },
+        // {
+        //     "title": "Linguee.com EN-DE",
+        //     "url": "http://www.linguee.com/english-german/search?query={query}"
+        // },
+        // {
+        //     "title": "Linguee.de DE-EN",
+        //     "url": "http://www.linguee.de/deutsch-englisch/search?query={query}"
+        // },
+        // {
+        //     "title": "Pons.eu",
+        //     "url": "http://en.pons.eu/dict/search/results/?q={query}&l=deen"
+        // },
         {
             "title": "Thesaurus.com",
             "url": "http://thesaurus.com/browse/{query}"

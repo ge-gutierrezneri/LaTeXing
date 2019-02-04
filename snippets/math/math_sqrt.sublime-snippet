@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+\\sqrt{$1}
+]]></content>
+	<tabTrigger>sq</tabTrigger>
+	<scope>text.tex.latex</scope>
+	<description>Fraction — \frac{}{}]</description>
+</snippet>

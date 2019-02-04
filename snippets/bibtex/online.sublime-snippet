@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+% Optional fields: volume, number, pages, month, note
+@MISC{${1:Key},
+	author = {${2:Author}},
+	title = {${3:Title}},
+	year = {${4:Year}},
+	howpublished = {\url{${5:URL}}},
+	urldate = {${6:Accessed}}
+}
+]]></content>
+	<tabTrigger>online</tabTrigger>
+	<description>BibTeX Online Misc</description>
+	<scope>text.bibtex</scope>
+</snippet>

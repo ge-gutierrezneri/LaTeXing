@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\\frac{\partial^2 $1}{\partial {$2}^2} $0 ]]></content>
+	<scope>text.tex.latex</scope>
+	<description>Second Partial Derivative</description>
+	<tabTrigger>pd2</tabTrigger>
+</snippet>

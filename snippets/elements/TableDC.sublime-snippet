@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+\begin{Table}
+	\centering
+	\captionof{table}{${1:caption}}\label{tab:${2:label}}
+	%\resizebox{\textwidth}{!}{%
+	\\begin{tabular${3:y}${3/()$|(y)$|(.*)/(?1:)(?2:\}\{1.0\\textwidth)/}}{${4}}
+		\hline
+		$0${4/((?<=.)l|c|r|C|L|R)|./(?1:&  )/g} \\\
+		\hline
+	\\end{tabular${3:y}${3/()$|(y)$|(.*)/(?1:)(?2:)/}}
+	%}
+\end{Table}
+]]></content>
+	<tabTrigger>TBL</tabTrigger>
+	<scope>text.tex.latex</scope>
+  <description>New table</description>
+</snippet>

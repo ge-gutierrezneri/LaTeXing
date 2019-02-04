@@ -3,13 +3,11 @@
 	"completions":
 	[
 		"\\textdollar",
-		{ "trigger": "&", "contents": "\\&" },
+		{ "trigger": "&", "contents": "&\t" },
 		{ "trigger": "%", "contents": "\\%" },
 		{ "trigger": "#", "contents": "\\#" },
 		"\\$",
 		{ "trigger": "_", "contents": "\\_" },
-		{ "trigger": "{", "contents": "\\{" },
-		{ "trigger": "}", "contents": "\\}" },
 		
 		{ "trigger": "\\{", "contents": "\\left\\{" },
 		{ "trigger": "\\}", "contents": "\\right\\}" },

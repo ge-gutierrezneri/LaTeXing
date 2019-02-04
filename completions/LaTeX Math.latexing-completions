@@ -1,5 +1,5 @@
 {
-	"scope": "string.other.math",
+	"scope": "text.tex.latex.ing",
 	"completions": 
 	[
 			{ "trigger": "(", "contents": "\\left(" },

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+\\frac{\partial $1}{\partial $2}]]></content>
+	<scope>text.tex.latex</scope>
+	<description>Partial Derivative</description>
+	<tabTrigger>pd</tabTrigger>
+</snippet>

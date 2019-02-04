@@ -1,0 +1,25 @@
+<snippet>
+    <content><![CDATA[
+\begin{titlepage}
+	\centering
+
+	{\scshape\huge TU Delft \par}
+	\vspace{1cm}
+
+	{\scshape\Large ${1:course} \par}
+	\vspace{1.5cm}
+    \includegraphics[height=6cm]{img/title.eps}
+	\par\vspace{1cm}
+	{\huge\bfseries ${2:assignment} \par}
+    {\large ${3:subtitle} \par}
+	\vspace{2cm}
+	{\Large\itshape ${4:author} \par}
+	\vfill
+    
+	{\large\today\par}
+\end{titlepage}
+]]></content>
+    <tabTrigger>TitlePage</tabTrigger>
+    <scope>text.plain, text.tex.latex</scope>
+    <description>New Title Page</description>
+</snippet>

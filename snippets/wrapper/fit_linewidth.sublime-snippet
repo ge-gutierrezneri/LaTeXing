@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[
+\\resizebox{\\linewidth}{!}{%
+${1:$SELECTION}
+}]]>
+</content>
+	<tabTrigger>fit</tabTrigger>
+	<scope>text.tex.latex</scope>
+	<description>Fit content to line width</description>
+</snippet>

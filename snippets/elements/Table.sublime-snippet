@@ -1,11 +1,17 @@
 <snippet>
 	<content><![CDATA[
-\begin{table}
-	\begin{tabular}{${1}}
-		${4}
-	\end{tabular}
-	\caption{${2:caption}}
-	\label{tbl:${3:label}}
+\begin{table}[H] % other options: h, t, p
+	\centering
+	\caption{${1:caption}}
+	\label{tab:${2:label}} \vspace{-0.5em}
+	%\resizebox{\textwidth}{!}{%
+	\\begin{tabular${3:y}${3/()$|(y)$|(.*)/(?1:)(?2:\}\{1.0\\textwidth)/}}{c${4}}
+		\hline
+		$0	${4/((?<=.)l|c|r|L|C|R)|./(?1:&\t)/g} \\\ \hline
+			${4/((?<=.)l|c|r|L|C|R)|./(?1:&\t)/g} \\\
+		\hline
+	\\end{tabular${3:y}${3/()$|(y)$|(.*)/(?1:)(?2:)/}}
+	%}
 \end{table}
 ]]></content>
 	<tabTrigger>tbl</tabTrigger>
