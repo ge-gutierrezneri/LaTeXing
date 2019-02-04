@@ -1,6 +1,6 @@
 # LaTeXing
 
-LaTeXing - Professional Typesetting - An extension for Sublime Text which makes your life  easier and more comfortable while creating your documents.
+Enrique's extra snippets for LaTeXing - Professional Typesetting - An extension for Sublime Text which makes your life  easier and more comfortable while creating your documents.
 
 ## Installation
 
