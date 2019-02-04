@@ -1,7 +1,14 @@
 # LaTeXing
+
 LaTeXing - Professional Typesetting - An extension for Sublime Text which makes your life  easier and more comfortable while creating your documents.
 
 ## Installation
+
+From this repository:
+
+- Add repository from your command palette
+- Install package
+
 
 If you already have package control, just follow these steps:
 
